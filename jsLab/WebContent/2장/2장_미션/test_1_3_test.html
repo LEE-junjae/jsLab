@@ -4,11 +4,17 @@
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <title> 종합실습1-3 </title>
 <script type="text/javascript">
+
   var user_height=prompt("당신의 신장은?","0");
   var user_weight=prompt("당신의 체중은?","0");
-  var normal_weight=
+  var normal_Weight = (user_height - 100) * 0.9;
+  var result = (user_height >= (normal_Weight - 5)) && (user_height <= (normal_Weight +5));
+  
+  document.write("신장 : " + user_height + "<br>");
+  document.write("체중 : " + user_weight + "<br>");
+  document.write("적정 체중 : " + normal_Weight + "<br>");
+  result ? document.write("적정 체중 입니다.") : document.write("적정 체중이 아닙니다.");
  
-  document.write(result);
 </script>
 </head>
 <body>
