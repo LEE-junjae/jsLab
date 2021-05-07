@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8" />
-<title> 함수 </title>
+<title>함수</title>
 <script type="text/javascript">
 //<![CDATA[
 function {
@@ -11,10 +11,21 @@ function {
    var bodyTag=document.getElementsByTagName("body")[0];
    
 }
+var i = 0; //변수 i에 초깃값 지정
+//colorBg함수를 정의
+function colorBg() {
+i++; //변수 i에 데이터를 1씩 증가시킴.
+if (i >= arrcolor.length)
+i = 0;
+//<body> 요소를 불러와 변수 bodyTag에 참조시켰습니다.
+var bodyTag = document.getElementsByTagName("body")[0];
+//스타일(CSS)를 이용해 <body>에 배경 색상이 바뀝니다.
+bodyTag.style.backgroundColor = color[i];
+}
 //]]>
 </script>
 </head>
 <body>
-<button onclick="">배경 색상 바꾸기</button>
+	<button onclick="">배경 색상 바꾸기</button>
 </body>
 </html>
