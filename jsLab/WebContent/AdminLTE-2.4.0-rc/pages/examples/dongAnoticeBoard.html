@@ -43,6 +43,13 @@
 	href="css/DataTables/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css"
 	href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+<!-- 구글 세계 언어 선택 -->
+<script type="text/javascript">
+function googleTranslateElementInit() {
+new google.translate.TranslateElement({pageLanguage: 'ko', includedLanguages: 'en,ja,ko,zh-CN', layout:
+google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script type="text/javascript" language="javascript"
 	src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -51,9 +58,12 @@
 <script>
 	var $hs = jQuery.noConflict();
 </script>
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
 
 <script type="text/javascript" class="init">
+
+
 	$hs(document).ready(
 			function() {
 				var g = "https://api.rss2json.com/v1/api.json?rss_url=";
@@ -173,6 +183,7 @@ h1 {
 				<div class="navbar-custom-menu">
 					<ul class="nav navbar-nav">
 						<!-- Messages: style can be found in dropdown.less-->
+						<li><div id="google_translate_element"></div></li>
 						<li class="dropdown messages-menu"><a href="#"
 							class="dropdown-toggle" data-toggle="dropdown"> <i
 								class="fa fa-envelope-o"></i> <span class="label label-success">4</span>
